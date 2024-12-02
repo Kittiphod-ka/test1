@@ -5,10 +5,14 @@
 </form>
 
 <ul>
-    {% for course in courses %}
-        <li>
-            <a href="{% url 'update' pk=course.course_id %}">update</a>
-            Course ID: {{ course.course_id }}, Course Name: {{ course.course_name }}
-        </li>
-    {% endfor %}
+    {% if coures %}
+        {% for course in courses %}
+            <li>
+                <a href="{% url 'update' pk=course.course_id %}">update</a>
+                <a href="{% url 'delete' pk=course.pk %}" onclick="return confirm('delete');">Delete</a>
+                Course ID: {{ course.course_id }}, Course Name: {{ course.course_name }}
+            </li>
+        {% endfor %}
+    {% endif %}
+
 </ul>
