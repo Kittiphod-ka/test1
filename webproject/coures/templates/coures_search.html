@@ -1,0 +1,14 @@
+<h1>Search Course</h1>
+<form method="Get">
+    <input type="text" name="id" placeholder="enter course id">
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+    {% for course in courses %}
+        <li>
+            <a href="{% url 'update' pk=course.course_id %}">update</a>
+            Course ID: {{ course.course_id }}, Course Name: {{ course.course_name }}
+        </li>
+    {% endfor %}
+</ul>

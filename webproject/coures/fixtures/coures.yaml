@@ -1,0 +1,24 @@
+- model: course.course
+  pk: 12345
+  fields:
+    course_id: 12345
+    course_name: dstoolbox
+    course_teacher: Dowmean
+- model: course.course
+  pk: 23456
+  fields:
+    course_id: 23456
+    course_name: EDA
+    course_teacher: Dowmean2
+- model: course.course
+  pk: 34567
+  fields:
+    course_id: 34567
+    course_name: Project management
+    course_teacher: Dowmean3
+- model: course.course
+  pk: 45678
+  fields:
+    course_id: 45678
+    course_name: SA
+    course_teacher: Dowmean4
