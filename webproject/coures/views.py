@@ -10,6 +10,13 @@ from .models import *
 def course_list(request):
     courses = course.objects.all()  # ดึงรายการรายวิชาทั้งหมด
     return render(request, 'course_list.html', {'courses': courses})
+-----
+class course_list(ListView):
+    model = course
+    template_name = "course_list.html"
+    context_object_name = "course_list"
+    
+----
 
 def course_search(request):
     search = request.GET.get('id', '')
